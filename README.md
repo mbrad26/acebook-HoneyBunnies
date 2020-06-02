@@ -24,3 +24,9 @@ First, clone this repository. Then:
 > bundle exec rspec # Run the tests to ensure it works
 > bin/rails server # Start the server at localhost:3000
 ```
+
+// Generate controller 
+// rails g controller Users
+
+// Reverse reverse generate controller
+// rails d controller Users
