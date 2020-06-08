@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-feature 'User can likes posts', type: :feature do
-  scenario 'a user likes a post' do
+feature 'User can like posts', type: :feature do
+  scenario 'liking a post' do
     #signs the user in
     user = User.create(fname: 'Jon', lname: 'Doe', email: 'john.doe@example.com', password: 'password')
 
@@ -19,7 +19,7 @@ feature 'User can likes posts', type: :feature do
     click_button 'Submit'
 
     expect(page).to have_content 'Likes: 0'
-    first(:button, 'Like Post')
+    first(:button, 'Like Post').click
     expect(page).to have_content 'Likes: 1'
   end
 end
