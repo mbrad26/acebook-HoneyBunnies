@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get '/users/:id', to: 'users#show'
   post '/users', to: 'users#create'
 
+  post '/likes', to: 'likes#create'
+
+
   #resources :sessions, only: [:new, :destroy]
   resources :posts
 end
