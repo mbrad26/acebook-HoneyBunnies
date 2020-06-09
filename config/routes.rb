@@ -9,6 +9,9 @@ Rails.application.routes.draw do
   # post '/users', to: 'users#create'
   # patch '/users/:id/edit', to: 'users#update'
 
+  post '/likes', to: 'likes#create'
+
+
   #resources :sessions, only: [:new, :destroy]
   resources :posts
   resources :users
