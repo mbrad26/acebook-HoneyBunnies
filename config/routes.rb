@@ -4,11 +4,12 @@ Rails.application.routes.draw do
   get '/sessions/new', to: 'sessions#new'
   post '/sessions', to: 'sessions#create'
   get '/sessions/destroy', to: 'sessions#destroy'
-  get '/users/:id', to: 'users#show'
-  get '/users/:id/edit', to: 'users#edit'
-  post '/users', to: 'users#create'
-  patch '/users/:id/edit', to: 'users#update'
+  # get '/users/:id', to: 'users#show'
+  # get '/users/:id/edit', to: 'users#edit'
+  # post '/users', to: 'users#create'
+  # patch '/users/:id/edit', to: 'users#update'
 
   #resources :sessions, only: [:new, :destroy]
   resources :posts
+  resources :users
 end

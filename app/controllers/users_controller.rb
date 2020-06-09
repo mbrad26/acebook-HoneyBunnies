@@ -25,8 +25,14 @@ class UsersController < ApplicationController
   
   def update
     @user = User.find(session[:user_id])
-    @user.update_attributes(user_params)
-    redirect_to "/users/#{@user.id}", notice: 'Profile Updated'
+    # @user.update_attributes(user_params)
+    # redirect_to "/users/#{@user.id}", notice: 'Profile Updated'
+    if @user.update_attributes(user_params)
+      redirect_to "/users/#{@user.id}", notice: 'Profile Updated'
+    else
+      redirect_to "/users/#{@user.id}/edit", notice: 'Provided details are not valid'
+      # redirect_to "/sessions/new"
+    end
   end
 
   private
