@@ -12,7 +12,7 @@ RSpec.feature 'Delete Post', type: :feature do
     fill_in 'Message', with: 'Hello, world!'
     click_button 'Submit'
 
-    click_button 'Delete Post'
+    all(:button, 'Delete Post').last.click
 
     expect(page).to_not have_content('Hello, world!')
   end
