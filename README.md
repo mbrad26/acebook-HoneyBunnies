@@ -11,7 +11,7 @@ For this project we worked in a team to produce a social media platform.
 - Honey Bunnies card wall is here: <https://github.com/cmb84scd/acebook-HoneyBunnies/projects/1>
 - Honey Bunnies wiki is here: <https://github.com/cmb84scd/acebook-HoneyBunnies/wiki>
 
-## Installation instructions 
+## Installation instructions
 
 First, clone this repository. Then:
 
@@ -42,7 +42,7 @@ Create a branch and when completed submit a pull request
 ```
 As a User
 So I can create my profile
-I want to be able to sign up 
+I want to be able to sign up
 ```
 ```
 As a User
@@ -74,10 +74,6 @@ As a User
 So that I can agree with a post
 I want to be able to 'Like' it
 ```
-
-
-### To be done:
-
 ```
 As a User
 So I can make changes to my profile
@@ -85,13 +81,16 @@ I'd like to be able to update it
 ```
 ```
 As a User
-So that I can show my face
-I want to be able to display my profile picture
-```
-```
-As a User
 So that I can start a fresh
 I want to be able to delete my profile
+```
+
+### To be done:
+
+```
+As a User
+So that I can show my face
+I want to be able to display my profile picture
 ```
 ```
 As a User
