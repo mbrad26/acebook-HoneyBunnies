@@ -19,7 +19,7 @@ feature 'User can like posts', type: :feature do
     click_button 'Submit'
 
     expect(page).to have_content 'Likes: 0'
-    first(:button, 'Like Post').click
+    all(:button, 'Like Post').last.click
     expect(page).to have_content 'Likes: 1'
   end
 end
