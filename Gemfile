@@ -28,9 +28,9 @@ gem 'bcrypt', '~> 3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'foreman'
 gem 'react_on_rails', '11.1.4'
 gem 'webpacker', '~> 3'
-gem 'foreman'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

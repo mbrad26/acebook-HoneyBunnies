@@ -7,6 +7,7 @@ AllCops:
     - 'config/**/*'
     - 'db/**/*'
     - 'vendor/**/*'
+    - 'node_modules/**/*'
 
 inherit_from:
   - https://raw.githubusercontent.com/makersacademy/scaffolint/v1.1.0/.rubocop.yml

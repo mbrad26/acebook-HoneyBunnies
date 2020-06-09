@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(session[:user_id])
-    if @user.update_attributes(user_params)
+    if @user.update(user_params)
       redirect_to "/users/#{@user.id}", notice: 'Profile Updated'
     else
       redirect_to "/users/#{@user.id}/edit", notice: 'Provided details are not valid'
@@ -34,14 +34,6 @@ class UsersController < ApplicationController
 
   def destroy
     @user = User.find(session[:user_id])
-    p '++++++++++++++'
-    p @user
-
-    @user.destroy
-
-    p '==============='
-    p @user
-
     session[:user_id] = nil
     redirect_to '/', notice: 'Account deleted successfully'
   end
