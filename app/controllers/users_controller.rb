@@ -16,6 +16,17 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(session[:user_id])
+  end
+
+  def edit
+    @user = User.find(session[:user_id])
+  end
+  
+  def update
+    @user = User.find(session[:user_id])
+    @user.update_attributes(user_params)
+    redirect_to "/users/#{@user.id}", notice: 'Profile Updated'
   end
 
   private

@@ -1,6 +1,15 @@
-<h1>Welcome <%= @user.fname %> <%= @user.lname %></h1>
+<h1>User Account details</h1>
 
+<ul>
+  <li>
+    <%= @user.fname %>
+  </li>
+  <li>
+    <%= @user.lname %>
+  </li>
+   <li>
+    <%= @user.email %>
+  </li>
+</ul>
 
-<%= form_for @user, url: "/sessions/destroy", method: :get do |f| %>
-    <%= f.submit "Sign out" %>
-  <% end %>
+<%= link_to 'Edit Profile', "/users/#{session[:user_id]}/edit", class: 'btn btn-primary' %>
