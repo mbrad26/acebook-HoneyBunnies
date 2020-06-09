@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def create
     user = User.create(user_params)
-    session[:user_id] = user.id
+    # session[:user_id] = user.id
     # If user does not meet the conditions user.id will be nil
     if user.save
       redirect_to '/sessions/new', notice: `Welcome #{user.fname} #{user.lname}`
@@ -22,17 +22,28 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(session[:user_id])
   end
-  
+
   def update
     @user = User.find(session[:user_id])
-    # @user.update_attributes(user_params)
-    # redirect_to "/users/#{@user.id}", notice: 'Profile Updated'
     if @user.update_attributes(user_params)
       redirect_to "/users/#{@user.id}", notice: 'Profile Updated'
     else
       redirect_to "/users/#{@user.id}/edit", notice: 'Provided details are not valid'
-      # redirect_to "/sessions/new"
     end
+  end
+
+  def destroy
+    @user = User.find(session[:user_id])
+    p '++++++++++++++'
+    p @user
+
+    @user.destroy
+
+    p '==============='
+    p @user
+
+    session[:user_id] = nil
+    redirect_to '/', notice: 'Account deleted successfully'
   end
 
   private

@@ -13,3 +13,4 @@
 </ul>
 
 <%= link_to 'Edit Profile', "/users/#{session[:user_id]}/edit", class: 'btn btn-primary' %>
+<%= link_to 'Delete Account', '/', method: :delete, data: { confirm: 'Are you sure you want to delete your account?' }, class: 'btn btn-danger'%>
