@@ -2,8 +2,8 @@ require 'rails_helper'
 
 feature 'User can like posts', type: :feature do
   scenario 'liking a post' do
-    #signs the user in
-    user = User.create(fname: 'Jon', lname: 'Doe', email: 'john.doe@example.com', password: 'password')
+    # signs the user in
+    User.create(fname: 'Jon', lname: 'Doe', email: 'john.doe@example.com', password: 'password')
 
     visit '/sessions/new'
 
