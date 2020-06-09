@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'User can login', type: :feature do
   scenario 'a user can login' do
-    #signs the user in
+    # signs the user in
     user = User.create(fname: 'Jon', lname: 'Doe', email: 'john.doe@example.com', password: 'password')
 
     visit '/sessions/new'
@@ -13,7 +13,7 @@ feature 'User can login', type: :feature do
     fill_in 'user[password]', with: 'password'
     click_button 'Sign in'
 
-    expect(current_path).to eq "/users/#{user.id}"
+    expect(current_path).to eq "/posts"
     expect(page).to have_content "Welcome #{user.fname} #{user.lname}"
   end
 
