@@ -12,8 +12,8 @@ install:
  - echo $ABOUT TO RUN BUNDLE
  - bundle install
  - echo $SETUP DATABASE
- — rails db:create
- — rails db:migrate
+ — bundle exec rake db:create
+ — bundle exec rake db:migrate
 
 script:
  — bundle exec rspec
