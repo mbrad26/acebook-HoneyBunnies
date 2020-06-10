@@ -1,5 +1,9 @@
 <h1>User Account details</h1>
 
+<% if @user.image.attached? %>
+  <%= image_tag(@user.image) %>
+<% end%>
+
 <ul>
   <li>
     <%= @user.fname %>

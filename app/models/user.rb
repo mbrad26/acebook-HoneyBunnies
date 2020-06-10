@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :posts, dependent: :destroy
   has_many :likes, dependent: :destroy
+  has_one_attached :image
 
   has_secure_password
   validates :fname, :lname, :email, :password, presence: true
