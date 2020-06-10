@@ -6,6 +6,8 @@
       <div>
         <%= post.label :message %>
         <%= post.text_field :message, class: 'form-control'%>
+        <%= post.label 'Add Images' %>
+        <%= post.file_field :image %></br>
         <%= post.submit "Submit", class: "btn btn-sm btn-primary my-2" %>
       </div>
     <% end %>
@@ -16,6 +18,7 @@
   <% @posts.each do |post| %>
     <div class='row'>
       <p><%= post.message %> Likes: <%= post.likes.size %></p>
+      <%= image_tag(post.image, class: 'image_class') if post.image.attached? %>
     </div>
     <div class='row'>
       <p>Posted at: <%= post.created_at.to_time.strftime('%B %e at %l:%M %p') %></p></br>
