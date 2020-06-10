@@ -50,7 +50,7 @@ RSpec.describe User, type: :model do
   describe 'Validates image types' do
     let(:user) { User.new(fname: 'John', lname: 'Doe', email: 'john.doe@example.com', password: 'password') }
 
-    it 'validates a .png image ' do
+    it 'validates a .png image' do
       image_path = "#{Rails.root}/spec/files/MVC_DataB.png"
       user.image.attach(io: File.open(image_path), filename: "MVC_DataB", content_type: "image/png")
       user.save
@@ -58,7 +58,7 @@ RSpec.describe User, type: :model do
       expect(user.image).to be_valid
     end
 
-    it 'validates a .jpg image ' do
+    it 'validates a .jpg image' do
       image_path = "#{Rails.root}/spec/files/Matterhorn.jpg"
       user.image.attach(io: File.open(image_path), filename: "Matterhorn", content_type: "image/jpg")
       user.save
