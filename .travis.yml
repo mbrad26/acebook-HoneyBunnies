@@ -5,14 +5,11 @@ rvm:
 - 2.5.0
 
 install:
- - echo $START
  — gem uninstall bundler
- - echo $ABOUT TO INSTALL BUNDLER
  - gem install bundler -v 1.17.3
- - echo $ABOUT TO RUN BUNDLE
  - bundle install
  - echo $SETUP DATABASE
- — bundle exec rake db:create
+ — RAILS_ENV=test bundle exec rake db:create
  — bundle exec rake db:migrate
 
 script:
