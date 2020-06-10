@@ -9,6 +9,7 @@ end
 gem 'rails', '~> 5.2.2'
 gem 'railties', '~> 5.2.2'
 gem 'bootsnap'
+gem 'activestorage-validator'
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
