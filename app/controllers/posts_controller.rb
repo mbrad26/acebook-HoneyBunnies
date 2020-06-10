@@ -35,7 +35,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:message, :image)
+    params.require(:post).permit(:message, images: [])
   end
 
   def new_post

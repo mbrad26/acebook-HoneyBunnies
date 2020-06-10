@@ -24,12 +24,12 @@ RSpec.feature 'Timeline', type: :feature do
     click_button 'Sign in'
 
     fill_in 'Message', with: 'Hello, world!'
-    attach_file 'post[image]', "#{Rails.root}/spec/files/MVC_DataB.png"
+    attach_file 'post[images][]', "#{Rails.root}/spec/files/MVC_DataB.png"
     find('[name=commit]').click
     click_button 'Submit'
 
     # expect(page).to have_content('Hello, world!')
     # expect(page.find('.image')).to be
-    expect(page.has_css?('.image_class')).to be
+    expect(page.has_css?('.rounded')).to be
   end
 end
