@@ -4,15 +4,13 @@ services:
 rvm:
 - 2.5.0
 
-before_install:
-— gem uninstall bundler
-- gem install bundler --version '1.17.3'
-
 install:
+ — gem uninstall bundler
+ - gem install bundler --version '1.17.3'
  - bundle install
  — rails db:create
  — rails db:migrate
 
 script:
  — bundle exec rspec
- - bundle exec rubocop
+ # - bundle exec rubocop
