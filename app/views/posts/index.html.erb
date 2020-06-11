@@ -25,13 +25,13 @@
       <div class='row'>
         <% (0...post.images.count).each do |number| %>
           <div class='column'>
-            <%= image_tag(post.images[number], class: 'rounded') %></br>
+            <%= image_tag(post.images[number], class: 'rounded', id: "#{number}") %><br>
           </div>
         <% end %>
       </div>
- 
+
     <div class='row'>
-      <p>Posted at: <%= post.created_at.to_time.strftime('%B %e at %l:%M %p') %></p></br>
+      <p>Posted at: <%= post.created_at.to_time.strftime('%B %e at %l:%M %p') %></p><br>
       User ID: <%= post.user_id %>
     </div>
 
