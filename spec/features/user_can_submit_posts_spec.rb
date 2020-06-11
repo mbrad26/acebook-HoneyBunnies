@@ -28,8 +28,6 @@ RSpec.feature 'Timeline', type: :feature do
     find('[name=commit]').click
     click_button 'Submit'
 
-    # expect(page).to have_content('Hello, world!')
-    # expect(page.find('.image')).to be
     expect(page.has_css?('.rounded')).to be
   end
 end
