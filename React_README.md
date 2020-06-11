@@ -270,7 +270,7 @@ Finally, a `stateful component` is a class component that does maintain its own 
 
 You create `state` in a React component by declaring a `state property` on the component class in its **constructor**.
 
-This initializes the component with state when it is created. The state property **must be set to a JavaScript object**. 
+This initializes the component with state when it is created. The state property **must be set to a JavaScript object**.
 
 ```js
 this.state = {
@@ -319,6 +319,70 @@ class MyComponent extends React.Component {
   render() {
     return (
       <div>
+        <h1>{this.state.name}</h1>
+      </div>
+    );
+  }
+};
+```
+
+There is another way to access state in a component. In the `render()` method, before the return statement, you can write JavaScript directly.
+
+For example, you could declare functions, access data from state or props, perform computations on this data, and so on.
+
+Then, you can assign any data to variables, which you have access to in the return statement.
+
+```js
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'freeCodeCamp'
+    }
+  }
+  render() {
+    const name = this.state.name
+    return (
+      <div>
+        <h1>{name}</h1>
+      </div>
+    );
+  }
+};
+```
+
+# Set State with `this.setState`
+
+React provides a method for updating component state called `setState`.
+
+You call the `setState` method within your component class like so: `this.setState()`, passing in an object with key-value pairs. The keys are your `state properties` and the values are the updated state data.
+
+```js
+this.setState({
+  username: 'Lewis'
+});
+```
+
+React expects you to never modify state directly, `instead always use this.setState()` when state changes occur.
+
+```js
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: 'Initial State'
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.setState({
+      name: 'React Rocks!'
+    });
+  }
+  render() {
+    return (
+      <div>
+        <button onClick={this.handleClick}>Click Me</button>
         <h1>{this.state.name}</h1>
       </div>
     );
