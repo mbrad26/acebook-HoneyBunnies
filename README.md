@@ -10,6 +10,8 @@
 
 Create a clone app of Facebook using Ruby on Rails. This is a group project focused on pair programming and delivering MVP, utilizing XP principles.
 
+Visit [Honey Bunnies Acebook](https://acebook-honeybunnies.herokuapp.com/)
+
 ### The Team:
 
 Project created by the team: ([Ed Ancerys](https://github.com/EdAncerys), [Catriona Bennett](https://github.com/cmb84scd), [Gareth Woodman](https://github.com/GarethWoodman), [Marius Brad](https://github.com/mbrad26), [Paula Darias](https://github.com/pauladarias), [Asifur Rahman](https://github.com/aasirah93)) at Makers Academy.
@@ -35,7 +37,6 @@ We managed to implement the following features: **signup, signin, delete profile
 
 - We used Travis CI
 - We deployed the app using Heroku, only deploys when Travis is passing
-- Visit [Honey Bunnies Acebook](https://acebook-honeybunnies.herokuapp.com/)
 
 ### Project work flow plan and wall
 
